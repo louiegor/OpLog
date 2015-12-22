@@ -8,7 +8,7 @@ using System.Web.Mvc;
 // jQM - Dynamically Populate Listview from JSON
 // Overlay a picture on top of another pciture - http://stackoverflow.com/questions/5130374/positioning-and-overlaying-image-on-another-image, http://jsfiddle.net/WPWzq/
 // Overlay text over picture - http://jsfiddle.net/i_like_robots/7GvV2/
-
+// Canvas movinng pic over picture - http://jsfiddle.net/v92gn/
 
 // phase 1: set up the database structure character, organization, file
 //          - also design a structure so that the character can transform gear 1 to gear 2
