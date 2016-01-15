@@ -195,6 +195,7 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\File.cs" />
+    <Compile Include="Models\Log.cs" />
     <Compile Include="Models\Lookup.cs" />
     <Compile Include="Models\OpLogContext.cs" />
     <Compile Include="Models\Organization.cs" />

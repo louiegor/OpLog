@@ -22,6 +22,8 @@ using System.Web.Mvc;
 // phase 3: Create card, use charts for stats and use overlay for picture 
 // phase 4: Set up the world map so that it can be like a log or games
 
+//http://docs.asp.net/en/latest/client-side/yeoman.html
+
 namespace Oplog.Controllers
 {
     public class HomeController : Controller
