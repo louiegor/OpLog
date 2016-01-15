@@ -1,0 +1,13 @@
+# git ignore file
+_ReSharper.*/
+*.suo
+*.user
+*.dbproj.schemaview
+*.dbmdl
+*.onetoc2
+*.csproj.bak
+*.mswwsettings
+*/bin/
+*/obj/
+
+
