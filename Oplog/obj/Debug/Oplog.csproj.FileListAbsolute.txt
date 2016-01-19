@@ -7,7 +7,6 @@ C:\CODE\OpLog\Oplog\bin\DotNetOpenAuth.OAuth.Consumer.dll
 C:\CODE\OpLog\Oplog\bin\DotNetOpenAuth.OAuth.dll
 C:\CODE\OpLog\Oplog\bin\DotNetOpenAuth.OpenId.dll
 C:\CODE\OpLog\Oplog\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
-C:\CODE\OpLog\Oplog\bin\EntityFramework.dll
 C:\CODE\OpLog\Oplog\bin\Microsoft.Data.Edm.dll
 C:\CODE\OpLog\Oplog\bin\Microsoft.Data.OData.dll
 C:\CODE\OpLog\Oplog\bin\Microsoft.Web.Infrastructure.dll
@@ -83,3 +82,12 @@ C:\CODE\OpLog\Oplog\obj\Debug\Oplog.dll
 C:\CODE\OpLog\Oplog\obj\Debug\Oplog.pdb
 C:\CODE\OpLog\Oplog\obj\Debug\Oplog.Migrations.FirstM.resources
 C:\CODE\OpLog\Oplog\obj\Debug\Oplog.csproj.GenerateResource.Cache
+C:\CODE\OpLog\Oplog\bin\System.Net.Http.Formatting.dll
+C:\CODE\OpLog\Oplog\bin\System.Web.Http.dll
+C:\CODE\OpLog\Oplog\bin\System.Web.Http.WebHost.dll
+C:\CODE\OpLog\Oplog\bin\System.Net.Http.Formatting.xml
+C:\CODE\OpLog\Oplog\bin\System.Web.Http.xml
+C:\CODE\OpLog\Oplog\bin\System.Web.Http.WebHost.xml
+C:\CODE\OpLog\Oplog\obj\Debug\Oplog.Migrations.AddLog.resources
+C:\CODE\OpLog\Oplog\obj\Debug\Oplog.Migrations.AddLog1.resources
+C:\CODE\OpLog\Oplog\obj\Debug\Oplog.Migrations.NonMandatory.resources

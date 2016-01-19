@@ -17,9 +17,11 @@ namespace Oplog.Models
         public string Description { get; set; }
         public int Stat { get; set; }
         public int OrganizationId { get; set; }
+        public int? LevelUpCharacterId { get; set; }
+
         public virtual ICollection<File> Images { get; set; }
 
-
+        public virtual Character LevelUpCharacter { get; set; }
         public virtual Organization Organization { get; set; }
     }
 }

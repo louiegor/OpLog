@@ -191,6 +191,18 @@
     <Compile Include="Migrations\201512112105409_FirstM.Designer.cs">
       <DependentUpon>201512112105409_FirstM.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201601190522046_AddLog.cs" />
+    <Compile Include="Migrations\201601190522046_AddLog.Designer.cs">
+      <DependentUpon>201601190522046_AddLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601190524016_AddLog1.cs" />
+    <Compile Include="Migrations\201601190524016_AddLog1.Designer.cs">
+      <DependentUpon>201601190524016_AddLog1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601190548407_NonMandatory.cs" />
+    <Compile Include="Migrations\201601190548407_NonMandatory.Designer.cs">
+      <DependentUpon>201601190548407_NonMandatory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Character.cs" />
@@ -259,6 +271,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <None Include="Properties\PublishProfiles\louiegor.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -324,6 +337,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201512112105409_FirstM.resx">
       <DependentUpon>201512112105409_FirstM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601190522046_AddLog.resx">
+      <DependentUpon>201601190522046_AddLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601190524016_AddLog1.resx">
+      <DependentUpon>201601190524016_AddLog1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601190548407_NonMandatory.resx">
+      <DependentUpon>201601190548407_NonMandatory.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -10,8 +10,9 @@ using System.Web.Mvc;
 // Overlay text over picture - http://jsfiddle.net/i_like_robots/7GvV2/
 // Canvas movinng pic over picture - http://jsfiddle.net/v92gn/
 
-// phase 1: set up the database structure character, organization, file
-//          - also design a structure so that the character can transform gear 1 to gear 2
+// phase 1: set up the database structure character, organization, file 
+//          also design a structure so that the character can transform gear 1 to gear 2
+//          - Create seed method - for at least two organization strawhat pirate and doflamingo pirate
 //          - the stats can now be using seiya's model 100 as max, can change the model later
 //          - also support having a structure so that each character can have more than 1 picture, can select default
 //          - also organization should also contain a picture, can have emblem of organization

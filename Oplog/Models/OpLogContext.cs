@@ -17,7 +17,7 @@ namespace Oplog.Models
             public DbSet<Organization> Organizations { get; set; }
             public DbSet<File> Files { get; set; }
             public DbSet<OrganizationType> OrganizationTypes { get; set; }
-
+            public DbSet<Log> Logs { get; set; }
         }
     
 }
