@@ -7,6 +7,9 @@
         <meta name="viewport" content="width=device-width" />
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/Scripts/angular.js")
+        @Scripts.Render("~/Scripts/ng-table.js")
+        @Scripts.Render("~/Scripts/custom/app.js")
     </head>
     <body>
         <header>
@@ -28,7 +31,7 @@
                 </div>
             </div>
         </header>
-        <div id="body">
+        <div id="body" ng-app="myApp">
             @RenderSection("featured", required: false)
             <section class="content-wrapper main-content clear-fix">
                 @RenderBody()

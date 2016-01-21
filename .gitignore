@@ -9,5 +9,6 @@ _ReSharper.*/
 *.mswwsettings
 */bin/
 */obj/
+*/debug/
 
 
