@@ -13,7 +13,7 @@ namespace Oplog.Models
         public bool IsDefault { get; set; }
         public int CharacterId { get; set; }
 
-        //public virtual ICollection<Character> Characters { get; set; }
+        
         public virtual ICollection<Organization> Organizations { get; set; }
         public virtual ICollection<OrganizationType> OrganizationTypes { get; set; }
     }

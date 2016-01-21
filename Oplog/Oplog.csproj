@@ -207,6 +207,7 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\File.cs" />
+    <Compile Include="Models\Helper.cs" />
     <Compile Include="Models\Log.cs" />
     <Compile Include="Models\Lookup.cs" />
     <Compile Include="Models\OpLogContext.cs" />
@@ -273,6 +274,7 @@
     <Content Include="Global.asax" />
     <None Include="Properties\PublishProfiles\louiegor.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Images\Not_available_icon.jpg" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
