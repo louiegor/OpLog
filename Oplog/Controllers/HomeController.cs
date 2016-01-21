@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+using Oplog.Models;
 
 // Things that is interesting and can be included
 // jQM - Dynamically Populate Listview from JSON
@@ -12,11 +16,12 @@ using System.Web.Mvc;
 
 // phase 1: set up the database structure character, organization, file 
 //          also design a structure so that the character can transform gear 1 to gear 2
-//          - Create seed method - for at least two organization strawhat pirate and doflamingo pirate
-//          - the stats can now be using seiya's model 100 as max, can change the model later
-//          - also support having a structure so that each character can have more than 1 picture, can select default
-//          - also organization should also contain a picture, can have emblem of organization
-// phase 2: set up the list view structure so that u can modify
+//          Create seed method - for at least two organization strawhat pirate and doflamingo pirate
+//          the stats can now be using seiya's model 100 as max, can change the model later
+//          also support having a structure so that each character can have more than 1 picture, can select default
+//          also organization should also contain a picture, can have emblem of organization
+////// phase 2: 
+//          set up the list view structure so that u can modify
 //          organization, character, stats and files
 // 
 // *** phase 3 and 4 can be think of at later stage ***
@@ -49,5 +54,40 @@ namespace Oplog.Controllers
 
             return View();
         }
+
+        public ActionResult GetAllOrg()
+        {
+            var Db = new OpLogContext();
+            var o = Db.Organizations;
+            return o.ToJsonCamelResult();
+        }
+    }
+
+
+    public static class Helper
+    {
+
+        public static JsonResult ToJsonResult<T>(this T obj)
+        {
+            return new JsonResult() { Data = obj, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+        }
+
+        public static ContentResult ToJsonCamelResult<T>(this T obj)
+        {
+            var settings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver(), ReferenceLoopHandling = ReferenceLoopHandling.Ignore };
+            var jsonObj = JsonConvert.SerializeObject(obj, Formatting.Indented, settings);
+            //return new JsonResult { Data = jsonObj, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+            return new ContentResult
+            {
+                ContentType = "text/plain",
+                Content = jsonObj,
+                ContentEncoding = Encoding.UTF8
+            };
+
+
+        }
+
+
+
     }
 }
