@@ -46,18 +46,18 @@
 
 <div ng-controller="TableCtrl">
 
-    <p><strong>Page:</strong> {{tableParams.page()}}
+@*    <p><strong>Page:</strong> {{tableParams.page()}}
 
-    <p><strong>Count per page:</strong> {{tableParams.count()}}
+    <p><strong>Count per page:</strong> {{tableParams.count()}}*@
 
     <table ng-table="tableParams" class="table">
-        <tr ng-repeat="user in data">
+        <tr ng-repeat="user in $data">
             <td data-title="'Name'">
                 {{user.name}}
             </td>
-            <td data-title="'Age'">
+   @*         <td data-title="'Age'">
                 {{user.age}}
-            </td>
+            </td>*@
         </tr>
     </table>
 </div>

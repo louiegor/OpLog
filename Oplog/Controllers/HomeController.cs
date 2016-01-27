@@ -34,6 +34,21 @@ namespace Oplog.Controllers
 {
     public class HomeController : Controller
     {
+        private OpLogContext context;
+
+        public OpLogContext Db
+        {
+            get
+            {
+                if (context == null)
+                {
+                    context = new OpLogContext();
+                    return context;
+                }
+                return context;
+            }
+        }
+
         public ActionResult Index()
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
@@ -57,9 +72,21 @@ namespace Oplog.Controllers
 
         public ActionResult GetAllOrg()
         {
-            var Db = new OpLogContext();
+            //var Db = new OpLogContext();
             var o = Db.Organizations;
             return o.ToJsonCamelResult();
+        }
+
+        public ActionResult GetAllChar(int count, int page)
+        {
+            var allChar = Db.Characters.Select(x=> x.Name).ToList();
+            var allChar2 = Db.Characters.Select(x => x.Name);
+            var allChar3 = Db.Characters;
+            var temp1 =  allChar.ToJsonCamelResult();
+            var temp2 = allChar.ToJsonResult();
+            var temp3 = allChar2.ToJsonResult();
+            var temp4 = allChar3.ToJsonResult();
+            return temp4.ToJsonCamelResult();
         }
     }
 

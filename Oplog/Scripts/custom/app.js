@@ -1,4 +1,4 @@
-﻿var myApp = angular.module('myApp', ['ngTable']);
+﻿var myApp = angular.module('myApp', ['ngTable', 'ngResource']);
 
 myApp.controller('OrganizationCtrl', function ($scope, $http) {
     $scope.orgName = "";
@@ -25,34 +25,40 @@ myApp.controller('OrganizationCtrl', function ($scope, $http) {
     };
 });
 
-myApp.controller('TableCtrl', function ($scope, ngTableParams) {
-    $scope.data = [
-     { name: "Louiegor", age: 50 },
-     { name: "Tiancum", age: 43 },
-     { name: "Jacob", age: 27 },
-     { name: "Nephi", age: 29 },
-     { name: "Enos", age: 34 },
-     { name: "Tiancum", age: 43 },
-     { name: "Jacob", age: 27 },
-     { name: "Nephi", age: 29 },
-     { name: "Enos", age: 34 },
-     { name: "Tiancum", age: 43 },
-     { name: "Jacob", age: 27 },
-     { name: "Nephi", age: 29 },
-     { name: "Enos", age: 34 },
-     { name: "Tiancum", age: 43 },
-     { name: "Jacob", age: 27 },
-     { name: "Nephi", age: 29 },
-     { name: "Enos", age: 34 }
-    ];
+myApp.controller('TableCtrl', function ($scope, ngTableParams, $resource) {
+    
+    var api = $resource("/home/GetAllChar");
 
     $scope.tableParams = new ngTableParams({
-        page: 1,            // show first page
-        count: 10           // count per page
+        //paginationMaxBlocks: 13,
+        //paginationMinBlocks: 2,
+        page: 1,
+        count: 10
     }, {
-        total: $scope.data.length, // length of data
-        getData: function ($defer, params) {
-            $defer.resolve($scope.data.slice((params.page() - 1) * params.count(), params.page() * params.count()));
+        //total: $scope.data.length, // length of data
+        getData: function (params) {
+            return api.get(params.url()).$promise.then(function(data) {
+                params.total(data.data.length); // recal. page nav controls
+                return data.data;
+            });
         }
+        
     });
+    
+    //this.customConfigParams = createUsingFullOptions();
+
+    //function createUsingFullOptions() {
+    //    var initialParams = {
+    //        count: 5 // initial page size
+    //    };
+    //    var initialSettings = {
+    //        // page size buttons (right set of buttons in demo)
+    //        counts: [],
+    //        // determines the pager buttons (left set of buttons in demo)
+    //        paginationMaxBlocks: 13,
+    //        paginationMinBlocks: 2,
+    //        dataset: simpleList
+    //    };
+    //    return new NgTableParams(initialParams, initialSettings);
+
 });
