@@ -24,7 +24,9 @@ myApp.controller('OrganizationCtrl', function ($scope, $http) {
         }, function (response) { });
     };
 });
-
+/*
+http://stackoverflow.com/questions/21805734/loading-json-via-ajax-with-ngtable-parameters
+*/
 myApp.controller('TableCtrl', function ($scope, ngTableParams, $resource) {
     
     var api = $resource("/home/GetAllChar");
