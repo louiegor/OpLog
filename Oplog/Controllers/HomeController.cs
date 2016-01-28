@@ -77,7 +77,7 @@ namespace Oplog.Controllers
             return o.ToJsonCamelResult();
         }
 
-        public ActionResult GetAllChar(int count, int page)
+        public ActionResult GetAllChar()
         {
             var allChar = Db.Characters.Select(x=> x.Name).ToList();
             var allChar2 = Db.Characters.Select(x => x.Name);
