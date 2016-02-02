@@ -26,6 +26,7 @@ myApp.controller('OrganizationCtrl', function ($scope, $http) {
 });
 /*
 http://stackoverflow.com/questions/21805734/loading-json-via-ajax-with-ngtable-parameters
+http://plnkr.co/edit/TUOYmM?p=preview
 */
 myApp.controller('TableCtrl', function ($scope,$http, $filter, ngTableParams) {
     
@@ -48,46 +49,11 @@ myApp.controller('TableCtrl', function ($scope,$http, $filter, ngTableParams) {
             }, {
                 total: $scope.data.length, // length of data
                 getData: function($defer, params) {
-                    // use build-in angular filter
-                    //var orderedData = params.sorting() ?
-                    //    $filter('orderBy')($scope.data.data, params.orderBy()) :
-                    //    $scope.data.data;
+
                     var orderedData = $scope.data.data;
                     $defer.resolve(orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
                 }
             });
     });
 });
-    //$scope.tableParams = new ngTableParams({
-    //    //paginationMaxBlocks: 13,
-    //    //paginationMinBlocks: 2,
-    //    page: 1,
-    //    count: 10
-    //}, {
-    //    //total: $scope.data.length, // length of data
-    //    getData: function (params) {
-    //        return api.get(params.url()).$promise.then(function(data) {
-    //            params.total(data.data.length); // recal. page nav controls
-    //            return data.data;
-    //        });
-    //    }
-        
-    //});
-    
-    //this.customConfigParams = createUsingFullOptions();
-
-    //function createUsingFullOptions() {
-    //    var initialParams = {
-    //        count: 5 // initial page size
-    //    };
-    //    var initialSettings = {
-    //        // page size buttons (right set of buttons in demo)
-    //        counts: [],
-    //        // determines the pager buttons (left set of buttons in demo)
-    //        paginationMaxBlocks: 13,
-    //        paginationMinBlocks: 2,
-    //        dataset: simpleList
-    //    };
-    //    return new NgTableParams(initialParams, initialSettings);
-
 
