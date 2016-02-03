@@ -45,19 +45,22 @@
 </ol>
 
 <div ng-controller="TableCtrl">
+    <p><strong>Page:</strong> {{tableParams.page()}}
+    <p><strong>Count per page:</strong> {{tableParams.count()}}
 
-@*    <p><strong>Page:</strong> {{tableParams.page()}}
-
-    <p><strong>Count per page:</strong> {{tableParams.count()}}*@
-
+<p>Filter: <input class="form-control" type="text" ng-model="filter.$" /></p>
     <table ng-table="tableParams" class="table">
-        <tr ng-repeat="user in data">
-            <td data-title="'Name'">
+        <tr ng-repeat="user in $data">
+            <td data-title="'Name'" sortable="'name'">
                 {{user.name}}
             </td>
-   @*         <td data-title="'Age'">
-                {{user.age}}
-            </td>*@
+            <td data-title="'Id'">
+                {{user.id}}
+            </td>
+            <td>
+               <nobr><img width="24" height="24" ng-src="{{user.defaultIcon}}"/> {{user.name}} </nobr>
+            </td>
+
         </tr>
     </table>
 </div>

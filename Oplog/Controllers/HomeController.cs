@@ -81,7 +81,9 @@ namespace Oplog.Controllers
         {
             var allChar = Db.Characters.Select(x=> x.Name).ToList();
             var allChar2 = Db.Characters.Select(x => x.Name);
-            var allChar3 = Db.Characters;
+            var allChar3 = Db.Characters.ToList();
+
+
             var temp1 =  allChar.ToJsonCamelResult();
             var temp2 = allChar.ToJsonResult();
             var temp3 = allChar2.ToJsonResult();
