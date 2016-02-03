@@ -11,8 +11,8 @@ namespace Oplog.Models
         {
             var na = new File
                 {
-                    Name = "Not_available_icon.jpg",
-                    Path = @"~\Images\"
+                    Name = "anon.png",
+                    Path = @"Images/"
                 };
             return na;
         }

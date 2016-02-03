@@ -218,8 +218,10 @@
     <Compile Include="Models\Organization.cs" />
     <Compile Include="Models\OrganizationType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\CharacterTableVm.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
     <Content Include="Content\ng-table.css" />
     <Content Include="Content\ng-table.min.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -280,6 +282,8 @@
     <Content Include="Global.asax" />
     <Content Include="Content\ng-table.less" />
     <None Include="Properties\PublishProfiles\louiegor.pubxml" />
+    <Content Include="Images\anon.png" />
+    <Content Include="Images\luffy_icon.jpg" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />

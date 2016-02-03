@@ -56,6 +56,12 @@ namespace Oplog.Migrations
                                            new Character { Id = 26, Name = "Caesar Clown", OrganizationId = 2 },
                                            new Character { Id = 27, Name = "Bellamy", OrganizationId = 2 }
                 );
+            context.Files.AddOrUpdate(x=>new {x.Id, x.CharacterId},
+                    new File { Id = 1, Name = "luffy_icon.jpg" , Path="Images/", CharacterId = 1,}
+                
+                );
+
+
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data. E.g.
             //
