@@ -6,7 +6,7 @@ myApp.controller('OrganizationCtrl', function ($scope, $http) {
     $scope.list_category = "";
     var path = "/home/GetAllOrg";
     $http.get(path).then(function (response) {
-        $scope.listAllOrg = response;
+        $scope.listAllOrg = response.data;
     }, function (response) {
     });
 
@@ -36,10 +36,10 @@ myApp.controller('TableCtrl', function ($scope, $http, $filter, ngTableParams, N
       {
           page: 1,            // show first page
           count: 10,           // count per page
-          sorting: {name:'asc'}
+          //sorting: {name:'asc'}
       },
       {
-          //total: 0, // length of data
+          
           getData: function($defer, params) {
               NameService.getData($defer,params,$scope.filter);
           }

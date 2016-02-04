@@ -18,31 +18,17 @@
         </div>
     </section>
 }
-<h3>We suggest the following:</h3>
-<ol class="round">
-    <li class="one">
-        <h5>Getting Started</h5>
-        ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-        enables a clean separation of concerns and that gives you full control over markup
-        for enjoyable, agile development. ASP.NET MVC includes many features that enable
-        fast, TDD-friendly development for creating sophisticated applications that use
-        the latest web standards.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245151">Learn more…</a>
-    </li>
 
-    <li class="two">
-        <h5>Add NuGet packages and jump-start your coding</h5>
-        NuGet makes it easy to install and update free libraries and tools.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245153">Learn more…</a>
-    </li>
+   @*   public int Id { get { return character.Id; } }
+        public string Name { get { return character.Name; } }
+        public string IconPath { get { return character.DefaultIcon; } }
+        public string OrgName { get { return character.Organization.Name; } }
+        public string OrgType { get { return character.Organization.OrgType.Name; } }
+        public int OrgId { get { return character.OrganizationId; } }
+        public string OrgIconPath { get { return character.Organization.GetLogo().FullPath; } }
+        public string Description { get { return character.Description; } }
+        public int Stats { get { return character.Stat; } }*@
 
-    <li class="three">
-        <h5>Find Web Hosting</h5>
-        You can easily find a web hosting company that offers the right mix of features
-        and price for your applications.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn more…</a>
-    </li>
-</ol>
 
 <div ng-controller="TableCtrl">
     <p><strong>Page:</strong> {{tableParams.page()}}
@@ -50,17 +36,22 @@
 
 <p>Filter: <input class="form-control" type="text" ng-model="filter.$" /></p>
     <table ng-table="tableParams" class="table">
-        <tr ng-repeat="user in $data">
-            <td data-title="'Name'" sortable="'name'">
-                {{user.name}}
+        <tr ng-repeat="char in $data">
+            <td data-title="'Name'">
+               <nobr><img width="24" height="24" ng-src="{{char.iconPath}}"/> {{char.name}} </nobr>
             </td>
-            <td data-title="'Id'">
-                {{user.id}}
+            <td data-title="'Organization'">
+                {{char.orgName}}
+            </td>
+            <td data-title="'Type'">
+                {{char.orgType}}
             </td>
             <td>
-               <nobr><img width="24" height="24" ng-src="{{user.defaultIcon}}"/> {{user.name}} </nobr>
+                {{char.description}}
             </td>
-
+            <td>
+                {{char.stats}}
+            </td>
         </tr>
     </table>
 </div>

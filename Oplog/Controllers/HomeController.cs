@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Web;
 using System.Web.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using Oplog.Models;
+using Oplog.ViewModels;
 
 // Things that is interesting and can be included
 // jQM - Dynamically Populate Listview from JSON
@@ -73,22 +72,22 @@ namespace Oplog.Controllers
         public ActionResult GetAllOrg()
         {
             //var Db = new OpLogContext();
-            var o = Db.Organizations;
-            return o.ToJsonCamelResult();
+            var o = Db.Organizations.Select(x=>x.Name).ToList();
+            return Db.Organizations.ToJsonCamelResult();
         }
 
         public ActionResult GetAllChar()
         {
-            var allChar = Db.Characters.Select(x=> x.Name).ToList();
-            var allChar2 = Db.Characters.Select(x => x.Name);
-            var allChar3 = Db.Characters.ToList();
+            var c = Db.Characters.ToList();
 
+            var result = new List<CharacterTableVm>();
 
-            var temp1 =  allChar.ToJsonCamelResult();
-            var temp2 = allChar.ToJsonResult();
-            var temp3 = allChar2.ToJsonResult();
-            var temp4 = allChar3.ToJsonResult();
-            return temp4.ToJsonCamelResult();
+            foreach (var item in c)
+            {
+                result.Add(new CharacterTableVm(item));
+            }
+            //var c = Db.Characters.Select(x => new CharacterTableVm(x)).ToList();
+            return result.ToJsonCamelResult();
         }
     }
 
@@ -103,8 +102,9 @@ namespace Oplog.Controllers
 
         public static ContentResult ToJsonCamelResult<T>(this T obj)
         {
+            var jsonResult = new JsonResult() { Data = obj, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
             var settings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver(), ReferenceLoopHandling = ReferenceLoopHandling.Ignore };
-            var jsonObj = JsonConvert.SerializeObject(obj, Formatting.Indented, settings);
+            var jsonObj = JsonConvert.SerializeObject(jsonResult, Formatting.Indented, settings);
             //return new JsonResult { Data = jsonObj, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
             return new ContentResult
             {
