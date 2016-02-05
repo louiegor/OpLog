@@ -78,11 +78,9 @@ namespace Oplog.Controllers
 
         public ActionResult GetAllChar()
         {
-            var c = Db.Characters.ToList();
-
             var result = new List<CharacterTableVm>();
 
-            foreach (var item in c)
+            foreach (var item in Db.Characters)
             {
                 result.Add(new CharacterTableVm(item));
             }

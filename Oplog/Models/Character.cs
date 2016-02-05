@@ -19,21 +19,17 @@ namespace Oplog.Models
         public int Stat { get; set; }
         public int OrganizationId { get; set; }
         public int? LevelUpCharacterId { get; set; }
+        
 
         public string DefaultIcon
         {
             get
             {
-                var charFiles = DbClass.Db().Files.Where(x => x.CharacterId == Id);
-                if (!charFiles.Any())
+                var charFiles = Images.FirstOrDefault(x => x.IsDefault);
+                if (charFiles == null)
                     return "Images/anon.png";
 
-                var defaultCharfile = charFiles.FirstOrDefault(x => x.IsDefault);
-                
-                if (defaultCharfile != null)
-                    return defaultCharfile.FullPath;
-
-                return charFiles.First().FullPath;
+                return charFiles.FullPath;
             }
         }
 

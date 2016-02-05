@@ -57,7 +57,7 @@ namespace Oplog.Migrations
                                            new Character { Id = 27, Name = "Bellamy", OrganizationId = 2 }
                 );
             context.Files.AddOrUpdate(x=>new {x.Id, x.CharacterId},
-                    new File { Id = 1, Name = "luffy_icon.jpg" , Path="Images/", CharacterId = 1,}
+                    new File { Id = 1, Name = "luffy_icon.jpg" , Path="Images/", CharacterId = 1, IsDefault = true}
                 
                 );
 
