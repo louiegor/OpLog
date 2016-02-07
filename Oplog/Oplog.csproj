@@ -208,6 +208,10 @@
     <Compile Include="Migrations\201601190548407_NonMandatory.Designer.cs">
       <DependentUpon>201601190548407_NonMandatory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602070605411_AddDefaultPic.cs" />
+    <Compile Include="Migrations\201602070605411_AddDefaultPic.Designer.cs">
+      <DependentUpon>201602070605411_AddDefaultPic.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Character.cs" />
@@ -224,6 +228,9 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\demo.css" />
+    <Content Include="Content\fonts\Fontby.txt" />
+    <Content Include="Content\fonts\license.txt" />
+    <Content Include="Content\fonts\raphaelicons-webfont.svg" />
     <Content Include="Content\ng-table.css" />
     <Content Include="Content\ng-table.min.css" />
     <Content Include="Content\normalize.css" />
@@ -286,6 +293,9 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\ng-table.less" />
+    <Content Include="Content\fonts\raphaelicons-webfont.eot" />
+    <Content Include="Content\fonts\raphaelicons-webfont.ttf" />
+    <Content Include="Content\fonts\raphaelicons-webfont.woff" />
     <None Include="Properties\PublishProfiles\louiegor.pubxml" />
     <Content Include="Images\anon.png" />
     <Content Include="Images\luffy_icon.jpg" />
@@ -1154,6 +1164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201601190548407_NonMandatory.resx">
       <DependentUpon>201601190548407_NonMandatory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602070605411_AddDefaultPic.resx">
+      <DependentUpon>201602070605411_AddDefaultPic.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

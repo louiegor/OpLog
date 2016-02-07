@@ -48,7 +48,15 @@ myApp.controller('TableCtrl', function ($scope, $http, $filter, ngTableParams, N
     $scope.$watch("filter.$", function() {
         $scope.tableParams.reload();
     });
+
+    $scope.changeChar = function (charId) {
+        $scope.charId = charId;
+        $('#st-control-2').click();
+    };
+
+    $scope.charId = 1;
 });
+
 
 
 myApp.service("NameService", function ($http, $filter) {
