@@ -21,7 +21,7 @@
 				<input type="radio" name="radio-set" checked="checked" id="st-control-1"/>
 				<a href="#st-panel-1">All Characters</a>
 				<input type="radio" name="radio-set" id="st-control-2"/>
-				<a href="#st-panel-2">Character</a>
+				<a href="#st-panel-2">{{currentChar.name}}</a>
 				<input type="radio" name="radio-set" id="st-control-3"/>
 				<a href="#st-panel-3">Tranquillity</a>
 				<input type="radio" name="radio-set" id="st-control-4"/>
@@ -44,7 +44,7 @@
                             <table ng-table="tableParams" class="table">
                                 <tr ng-repeat="char in $data">
                                     <td data-title="'Name'" >
-                                        <a href="#" ng-click="changeChar(char.id)"><img width="24" height="24" ng-src="{{char.iconPath}}"></img> {{char.name}} </a>
+                                        <a href="#" ng-click="changeChar(char)"><img width="24" height="24" ng-src="{{char.iconPath}}"></img> {{char.name}} </a>
                                     </td>
                                     <td data-title="'Organization'">
                                         {{char.orgName}}
@@ -62,14 +62,12 @@
                             </table>
                         </div>
 
-                        @*						<h2>Serendipity</h2>
-						<p>Banksy adipisicing eiusmod banh mi sed. Squid stumptown est odd future nisi, commodo mlkshk pop-up adipisicing retro.</p>*@
                     </section>
 					
 					<section class="st-panel st-color" id="st-panel-2">
 						<div class="st-deco" data-icon="2"></div>
-						<h2>Happiness {{charId}}</h2>
-						<p>Art party readymade beard labore cosby sweater culpa. Art party whatever incididunt, scenester umami polaroid tofu.</p>
+						<h2>{{currentChar.name}}</h2>
+						<img ng-src="{{currentChar.defaultPicPath}}" style=" margin-top: 190px; width:20%; margin-left: 250px;"/>
 					</section>
 					
 					<section class="st-panel" id="st-panel-3">

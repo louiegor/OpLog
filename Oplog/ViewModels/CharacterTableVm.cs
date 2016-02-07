@@ -12,6 +12,7 @@ namespace Oplog.ViewModels
         public int Id { get { return character.Id; } }
         public string Name { get { return character.Name; } }
         public string IconPath { get { return character.DefaultIcon; } }
+        public string DefaultPicPath { get { return character.DefaultPic; } }
         public string OrgName { get { return character.Organization.Name; } }
         public string OrgType { get { return character.Organization.OrgType.Name; } }
         public int OrgId { get { return character.OrganizationId; } }

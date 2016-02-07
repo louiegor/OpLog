@@ -298,6 +298,7 @@
     <Content Include="Content\fonts\raphaelicons-webfont.woff" />
     <None Include="Properties\PublishProfiles\louiegor.pubxml" />
     <Content Include="Images\anon.png" />
+    <Content Include="Images\Luffydefault.jpg" />
     <Content Include="Images\luffy_icon.jpg" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />

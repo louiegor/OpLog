@@ -49,8 +49,8 @@ myApp.controller('TableCtrl', function ($scope, $http, $filter, ngTableParams, N
         $scope.tableParams.reload();
     });
 
-    $scope.changeChar = function (charId) {
-        $scope.charId = charId;
+    $scope.changeChar = function (character) {
+        $scope.currentChar = character;
         $('#st-control-2').click();
     };
 
