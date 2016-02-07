@@ -3,7 +3,7 @@
 }
 @section featured {
     <section class="featured">
-        <div class="content-wrapper">
+@*        <div class="content-wrapper">
             <hgroup class="title">
                 <h1>@ViewBag.Title.</h1>
                 <h2>@ViewBag.Message</h2>
@@ -15,19 +15,9 @@
                 If you have any questions about ASP.NET MVC visit
                 <a href="http://forums.asp.net/1146.aspx/1?MVC" title="ASP.NET MVC Forum">our forums</a>.
             </p>
-        </div>
+        </div>*@
     </section>
 }
-
-   @*   public int Id { get { return character.Id; } }
-        public string Name { get { return character.Name; } }
-        public string IconPath { get { return character.DefaultIcon; } }
-        public string OrgName { get { return character.Organization.Name; } }
-        public string OrgType { get { return character.Organization.OrgType.Name; } }
-        public int OrgId { get { return character.OrganizationId; } }
-        public string OrgIconPath { get { return character.Organization.GetLogo().FullPath; } }
-        public string Description { get { return character.Description; } }
-        public int Stats { get { return character.Stat; } }*@
 
 
 <div ng-controller="TableCtrl">
