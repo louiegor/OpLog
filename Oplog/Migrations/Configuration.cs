@@ -20,7 +20,8 @@ namespace Oplog.Migrations
 
             context.OrganizationTypes.AddOrUpdate(x => x.Name,
                                                   new OrganizationType {Id = 1, Name = "Pirates"},
-                                                  new OrganizationType {Id = 2, Name = "Marines"}
+                                                  new OrganizationType {Id = 2, Name = "Marines"},
+                                                  new OrganizationType {Id = 3, Name = "Shichibukai"}
                 );
 
             context.Organizations.AddOrUpdate(x => x.Name,

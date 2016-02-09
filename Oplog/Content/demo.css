@@ -16,7 +16,7 @@ body{
 	font-weight: 400;
 	font-size: 15px;
 	color: #333;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	-webkit-font-smoothing: antialiased;
 }
 a{
@@ -52,6 +52,22 @@ a{
 	float: left;
 	display: block;
 }
+
+#canvas {
+    overflow: hidden;
+}
+#background {
+    display: none;
+    overflow: hidden;
+}
+#ballon {
+    position: relative;
+    top: -50px;
+    left: -150px;
+    cursor: move;
+    opacity: 0.5;
+}
+
 @media screen and (max-width: 520px) {
 	.codrops-top { display: none; }
 }
