@@ -38,7 +38,7 @@
             var ballon = document.getElementById('ballon');
             context.drawImage(background, 0, 0);
 
-            $('#ballon').draggable({ containment: "parent" });
+            $('#ballon').draggable({ containment: '#canvas' });
 
             $('#draw').click(function () {
                 var $ballon = $('#ballon'),
