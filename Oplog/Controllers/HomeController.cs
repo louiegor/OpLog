@@ -14,6 +14,7 @@ using Oplog.ViewModels;
 // Canvas movinng pic over picture - http://jsfiddle.net/v92gn/
 // Edit View http://jsfiddle.net/timriley/5DMjt/
 // Containment of canvas http://jsfiddle.net/DGbT3/1529/
+// Canvas grid http://jsfiddle.net/fabricjs/S9sLu/
 
 
 // phase 1: set up the database structure character, organization, file 
