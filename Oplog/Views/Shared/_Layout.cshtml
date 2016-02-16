@@ -59,7 +59,9 @@
         ///
         var canvas = new fabric.Canvas('c', { selection: false });
         var grid = 50;
-        canvas.setBackgroundImage('/Images/anon.png');
+        canvas.setBackgroundImage('/Images/DressrosaMap.png');
+        canvas.width = 1024;
+        canvas.height = 768;
         // create grid
 
         for (var i = 0; i < (600 / grid) ; i++) {
@@ -90,25 +92,24 @@
             centeredRotation: true
         }));
 
-        var imgURL = 'http://i.imgur.com/8rmMZI3.jpg';
-
-        //var canvas = new fabric.Canvas('canvas');
-
+        //
+        // fabric image
+        //
+        var imgURL = '/Images/luffy_icon.jpg';
         var pugImg = new Image();
         pugImg.onload = function (img) {
             var pug = new fabric.Image(pugImg, {
-                //angle: 45,
-                width: 500,
-                height: 500,
+                width: 50,
+                height: 50,
                 left: 50,
-                top: 70,
-                scaleX: .25,
-                scaleY: .25
+                top: 100,
             });
             canvas.add(pug);
         };
         pugImg.src = imgURL;
-        // snap to grid
+        //
+        // fabric image
+        //
 
         canvas.on('object:moving', function (options) {
             options.target.set({

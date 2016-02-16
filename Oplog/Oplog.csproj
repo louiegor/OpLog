@@ -277,6 +277,7 @@
     <Content Include="Content\fonts\raphaelicons-webfont.woff" />
     <None Include="Properties\PublishProfiles\louiegor.pubxml" />
     <Content Include="Images\anon.png" />
+    <Content Include="Images\DressrosaMap.png" />
     <Content Include="Images\Luffydefault.jpg" />
     <Content Include="Images\luffy_icon.jpg" />
     <Content Include="Images\squareback.jpg" />
