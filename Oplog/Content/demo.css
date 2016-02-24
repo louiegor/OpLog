@@ -73,6 +73,11 @@ canvas {
     opacity: 0.5;
 }
 
+#c {
+    height: 1000px;
+    width: 900px;
+}
+
 @media screen and (max-width: 520px) {
 	.codrops-top { display: none; }
 }

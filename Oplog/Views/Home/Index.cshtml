@@ -37,6 +37,17 @@
         <a href="#" ng-click="save()">Done</a>
     </div>
     
+    <div ng-show="!editCharEnabled">
+        <label>{{currentChar.name}}</label>
+        <img ng-src="{{currentChar.defaultPicPath}}" style=" margin-top: 190px; width:20%; margin-left: 250px;"/>
+        <a href="#" ng-click="editChar()">Edit</a> 
+    </div>
+    <div ng-show="editCharEnabled">
+        <label><input ng-model="currentChar.name" /></label>
+        <img ng-src="{{currentChar.defaultPicPath}}" style=" margin-top: 190px; width:20%; margin-left: 250px;"/>
+        <a href="#" ng-click="saveChar()">Done</a>
+    </div>
+
     <canvas id="canvas" width="480" height="320"></canvas>
     
         <img src="~/Images/squareback.jpg" id="background" />
@@ -44,7 +55,8 @@
 
         <button id="draw">Draw</button>
     
-    <canvas id="c" width="600" height="600"></canvas>
+    @*<canvas id="c" ></canvas>*@
+    <canvas id="c" width="1200" height="900"></canvas>
 </div>
 
 <div ng-controller="OrganizationCtrl">

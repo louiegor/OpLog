@@ -17,7 +17,6 @@
 
     </head>
     <body>
-
         <div id="body" ng-app="myApp">
            
             <section class="content-wrapper main-content clear-fix">
@@ -32,7 +31,7 @@
         @RenderSection("scripts", required: false)
     </body>
     <script type="text/javascript" >
-        $(document).ready(function () {
+        $(function () {
             var d_canvas = document.getElementById('canvas');
             var context = d_canvas.getContext('2d');
             var background = document.getElementById('background');
@@ -60,13 +59,12 @@
         var canvas = new fabric.Canvas('c', { selection: false });
         var grid = 50;
         canvas.setBackgroundImage('/Images/DressrosaMap.png');
-        canvas.width = 1024;
-        canvas.height = 768;
+
         // create grid
 
-        for (var i = 0; i < (600 / grid) ; i++) {
-            canvas.add(new fabric.Line([i * grid, 0, i * grid, 600], { stroke: '#ccc', selectable: false }));
-            canvas.add(new fabric.Line([0, i * grid, 600, i * grid], { stroke: '#ccc', selectable: false }));
+        for (var i = 0; i < (1600 / grid) ; i++) {
+            canvas.add(new fabric.Line([i * grid, 0, i * grid, 1600], { stroke: '#ccc', selectable: false }));
+            canvas.add(new fabric.Line([0, i * grid, 1600, i * grid], { stroke: '#ccc', selectable: false }));
         }
 
         // add objects

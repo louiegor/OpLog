@@ -55,11 +55,21 @@ myApp.controller('TableCtrl', function ($scope, $http, $filter, ngTableParams, N
     };
 
     $scope.charId = 1;
+
+    $scope.editCharEnabled = false;
+
+    $scope.saveChar = function () {
+        $scope.editCharEnabled = false;
+    };
+
+    $scope.editChar = function () {
+        $scope.editCharEnabled = true;
+    };
+
+
+    //This is for the main page
     $scope.editorEnabled = false;
 
-    
-    //This is for the main page
-    
     $scope.testName = "Testing Name";
     
     $scope.save = function() {

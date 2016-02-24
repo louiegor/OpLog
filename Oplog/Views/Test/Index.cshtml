@@ -67,15 +67,24 @@
 					<section class="st-panel st-color" id="st-panel-2">
 					    <div class="st-deco" data-icon="2"></div>
 					   
-                         <div ng-hide="editorEnabled">
-					        <h2>{{currentChar.name}}</h2>
-                            <img ng-src="{{currentChar.defaultPicPath}}" style=" margin-top: 190px; width:20%; margin-left: 250px;"/>
-                            <a href="#" ng-click="edit()">Edit</a> 
+@*					    <div ng-show="!editorEnabled">
+					        <label>{{testName}}</label>
+					        <a href="#" ng-click="edit()">Edit</a> 
 					    </div>
 					    <div ng-show="editorEnabled">
-					        <h2><input ng-model="{{currentChar.name}}" /></h2>
+					        <label><input ng-model="testName" /></label>
+					        <a href="#" ng-click="save()">Done</a>
+					    </div>*@
+
+					    <div ng-show="!editCharEnabled">
+					        <label>{{currentChar.name}}</label>
                             <img ng-src="{{currentChar.defaultPicPath}}" style=" margin-top: 190px; width:20%; margin-left: 250px;"/>
-                            <a href="#" ng-click="save()">Done</a>
+                            <a href="#" ng-click="editChar()">Edit</a> 
+					    </div>
+					    <div ng-show="editCharEnabled">
+					        <label><input ng-model="currentChar.name" /></label>
+                            <img ng-src="{{currentChar.defaultPicPath}}" style=" margin-top: 190px; width:20%; margin-left: 250px;"/>
+                            <a href="#" ng-click="saveChar()">Done</a>
 					    </div>
 
 					</section>
