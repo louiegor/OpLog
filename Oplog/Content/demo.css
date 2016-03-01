@@ -16,7 +16,7 @@ body{
 	font-weight: 400;
 	font-size: 15px;
 	color: #333;
-	/*overflow: hidden;*/
+	overflow: hidden; /*if this is hidden then the scroll bar is gone*/
 	-webkit-font-smoothing: antialiased;
 }
 a{
@@ -76,6 +76,30 @@ canvas {
 #c {
     height: 1000px;
     width: 900px;
+}
+
+.char-page {
+    margin-top: 100px;
+}
+
+.char-main-image {
+    width: 300px;
+    height: 420px;
+    overflow:hidden;  
+    background-color: #ccc;
+    display: flex;
+}
+
+.char-main-image img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    /*margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;*/
+    /*display: block;*/
 }
 
 @media screen and (max-width: 520px) {
