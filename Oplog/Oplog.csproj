@@ -281,6 +281,7 @@
     <Content Include="Images\Luffydefault.jpg" />
     <Content Include="Images\luffy_icon.jpg" />
     <Content Include="Images\squareback.jpg" />
+    <Content Include="Images\testpromys.png" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
@@ -1128,6 +1129,7 @@
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\ng-table.min.js.map" />
     <Content Include="Views\Test\Index.cshtml" />
+    <Content Include="Views\Home\CssResizeSize.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

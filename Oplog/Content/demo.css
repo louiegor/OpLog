@@ -102,6 +102,81 @@ canvas {
     /*display: block;*/
 }
 
+/*this is the most outside*/
+.widthpx1200 {
+    width: 1200px;
+    padding-top: 5px;
+}
+
+.width10 {
+    width: 100%;
+    float: left;
+    margin: auto;
+}
+
+.width8 {
+    width: 79%;
+    float: left;
+    margin: auto;
+}
+
+.width7 {
+    width: 69%;
+    float: left;
+    margin: auto;
+}
+
+.width5 {
+    width: 49%;
+    float: left;
+    margin: auto;
+}
+.width4 {
+    width: 39%;
+    float: left;
+    margin: auto;
+}
+.width3 {
+    width: 29%;
+    float: left;
+    margin: auto;
+}
+.width2 {
+    width: 19%;
+    float: left;
+    margin: auto;
+}
+
+.background-blue {
+    background-color: blue
+}
+
+.background-purple {
+    background-color: purple
+}
+
+.background-yellow {
+    background-color: yellow
+}
+
+.background-grey {
+    background-color:grey
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.center {
+    margin: auto;
+
+    
+}
+
 @media screen and (max-width: 520px) {
 	.codrops-top { display: none; }
 }

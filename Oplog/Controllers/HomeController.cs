@@ -60,6 +60,11 @@ namespace Oplog.Controllers
             return View();
         }
 
+        public ActionResult CssResizeSize()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your app description page.";
