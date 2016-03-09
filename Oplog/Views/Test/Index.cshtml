@@ -70,28 +70,35 @@
 				            <div class="st-deco" data-icon="2"></div>
 					   
 				            @*This is for View*@
-				            <div class="char-page" ng-show="!editCharEnabled">
-				                <label>{{currentChar.name}}</label>
-				                <label>{{currentChar.orgName}}</label>
-				                <label>{{currentChar.orgType}}</label>
-				                <label>{{currentChar.description}}</label>
-				                <label>{{currentChar.stats}}</label>
-                                <div class="char-main-image">
-                                    <img ng-src="{{currentChar.defaultPicPath}}" />
-                                </div>
-				                <span><a href="#" ng-click="editChar()">Edit</a></span>
-				            </div>
-                        
-				            @*This is for Edit*@
-				            <div class="char-page" ng-show="editCharEnabled">
-				                <label><input ng-model="currentChar.orgName" /></label>
-				                <label><input ng-model="currentChar.orgType" /></label>
-				                <label><input type="text" ng-model="currentChar.description" /></label>
-				                <label><input type="number"ng-model="currentChar.stats" /></label>
+				            <div class="char-page-root" ng-show="!editCharEnabled">
 				                <div class="char-main-image">
 				                    <img ng-src="{{currentChar.defaultPicPath}}" />
 				                </div>
-				                <span><a href="#" ng-click="saveChar()">Done</a></span>
+				                <div class="char-stats">
+				                    <p>{{currentChar.name}}</p>
+				                    <p>{{currentChar.orgName}}</p>
+				                    <p>{{currentChar.orgType}}</p>
+				                    <p>{{currentChar.description}}</p>
+				                    <p>{{currentChar.stats}}</p>
+                                    <p><a href="#" ng-click="editChar()">Edit</a></p>
+				                </div>
+				                
+				            </div>
+                        
+				            @*This is for Edit*@
+				            <div class="char-page-root" ng-show="editCharEnabled">
+				                <div class="char-main-image">
+				                    <img ng-src="{{currentChar.defaultPicPath}}" />
+				                </div>
+				                <div class="char-stats">
+				                    <p><input ng-model="currentChar.name"></p>
+				                    <p><input ng-model="currentChar.orgName" /></p>
+				                    <p><input ng-model="currentChar.orgType" /></p>
+				                    <p><input type="text" ng-model="currentChar.description" /></p>
+				                    <p><input type="number"ng-model="currentChar.stats" /></p>
+                                    <p><a href="#" ng-click="saveChar()">Done</a></p>
+				                </div>
+				                
 				            </div>
 				        </div>
 				    </section>
