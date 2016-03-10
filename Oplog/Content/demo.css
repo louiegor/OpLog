@@ -119,6 +119,11 @@ canvas {
     /*display: block;*/
 }
 
+.textarea {
+    width: 300px;
+    height: 100px;
+}
+
 /*this is the most outside*/
 .widthpx1200 {
     width: 1200px;
@@ -192,6 +197,20 @@ canvas {
     margin: auto;
 
     
+}
+
+/*@import url('http://twitter.github.com/bootstrap/assets/css/bootstrap.css');
+@import url('http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css');*/
+.container {
+    background: #f3f3f3;
+}
+#counter {
+    position: relative;
+}
+#over {
+    position:absolute;
+    left:33%;
+    top:43%;
 }
 
 @media screen and (max-width: 520px) {

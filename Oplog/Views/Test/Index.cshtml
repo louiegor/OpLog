@@ -91,11 +91,11 @@
 				                    <img ng-src="{{currentChar.defaultPicPath}}" />
 				                </div>
 				                <div class="char-stats">
-				                    <p><input ng-model="currentChar.name"></p>
-				                    <p><input ng-model="currentChar.orgName" /></p>
-				                    <p><input ng-model="currentChar.orgType" /></p>
-				                    <p><input type="text" ng-model="currentChar.description" /></p>
-				                    <p><input type="number"ng-model="currentChar.stats" /></p>
+				                    <p><label>Name: </label><input ng-model="currentChar.name"></p>
+				                    <p><label>Organization: </label><input ng-model="currentChar.orgName" /></p>
+				                    <p><label>Type: </label><input ng-model="currentChar.orgType" /></p>
+				                    <p><label>Description: </label><textarea ng-model="currentChar.description" class="textarea"></textarea></p>
+				                    <p><label>Stats: </label><input type="number"ng-model="currentChar.stats" /></p>
                                     <p><a href="#" ng-click="saveChar()">Done</a></p>
 				                </div>
 				                
