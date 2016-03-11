@@ -240,6 +240,10 @@ div.transbox p {
   color: #000000;
 }
 
+.transbox span {
+    font-size: 10px;
+}
+
 @media screen and (max-width: 520px) {
 	.codrops-top { display: none; }
 }
