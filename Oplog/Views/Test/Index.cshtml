@@ -1,7 +1,7 @@
 ﻿@*This is test page*@
 
 
-        <div class="container" style="overflow: hidden">
+        <div class="container" >
 		
 			<!-- Codrops top bar -->
             <div class="codrops-top">
@@ -75,12 +75,12 @@
 				                    <img ng-src="{{currentChar.defaultPicPath}}" />
 				                </div>
 				                <div class="char-stats">
-				                    <p>{{currentChar.name}}</p>
-				                    <p>{{currentChar.orgName}}</p>
-				                    <p>{{currentChar.orgType}}</p>
-				                    <p>{{currentChar.description}}</p>
-				                    <p>{{currentChar.stats}}</p>
-                                    <p><a href="#" ng-click="editChar()">Edit</a></p>
+				                    <p><label>Name: </label>{{currentChar.name}}</p>
+				                    <p><label>Organization: </label>{{currentChar.orgName}}</p>
+				                    <p><label>Type: </label>{{currentChar.orgType}}</p>
+				                    <p><label>Description: </label>{{currentChar.description}}</p>
+				                    <p><label>Stats: </label>{{currentChar.stats}}</p>
+				                    <p><a href="#" ng-click="editChar()">Edit</a></p>
 				                </div>
 				                
 				            </div>

@@ -16,7 +16,7 @@ body{
 	font-weight: 400;
 	font-size: 15px;
 	color: #333;
-	overflow: hidden; /*if this is hidden then the scroll bar is gone*/
+	/*overflow: hidden;*/ /*if this is hidden then the scroll bar is gone*/
 	-webkit-font-smoothing: antialiased;
 }
 a{
@@ -203,14 +203,41 @@ canvas {
 @import url('http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css');*/
 .container {
     background: #f3f3f3;
+    width: 100%;
 }
-#counter {
+.counter {
     position: relative;
 }
-#over {
+.over {
     position:absolute;
-    left:33%;
-    top:43%;
+    left:24px;
+    top:79px;
+    width: 256px;
+    height: auto;
+}
+
+div.background {
+  /*background: url(klematis.jpg) repeat;*/
+  border: 2px solid black;
+}
+
+div.transbox {
+    left: 32px;
+    top: 276px;
+    position: absolute;
+    width: 243px;
+    height: 126px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+    border-radius: 5px;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
 }
 
 @media screen and (max-width: 520px) {
